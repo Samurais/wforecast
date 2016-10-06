@@ -25,7 +25,11 @@ Check out the testcases.
 
 e.g.
 
+> first, get API_KEY from http://www.heweather.com/my/service
+
+
 ```
+    var wf = require('wforecast')(API_KEY);
     wf.getWeatherByCity('beijing')
         .then(function(res) {
             console.log(JSON.stringify(res));
