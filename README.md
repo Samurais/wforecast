@@ -5,6 +5,11 @@ Free Quota 3,000 Requests Per Day.
 Support China Cities but also main cities world wide.
 Docs http://www.heweather.com/documents/api
 
+## Install
+```
+npm install wforecast
+```
+
 ## Test 
 ```
 cd wforecast

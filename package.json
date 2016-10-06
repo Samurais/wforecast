@@ -1,6 +1,6 @@
 {
   "name": "wforecast",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Get weather with http://www.heweather.com/",
   "main": "index.js",
   "scripts": {
