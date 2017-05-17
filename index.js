@@ -5,7 +5,8 @@
 const request = require('superagent'),
     Q = require('q'),
     log = require('debug')('wforecast'),
-    _ = require('lodash');
+    _ = require('lodash'),
+    urlencode = require('urlencode');
 
 
 const baseUrl = "https://free-api.heweather.com/v5";
@@ -19,8 +20,9 @@ var WForewast = function (apiKey) {
 
 WForewast.prototype.getWeatherByCity = function (city) {
     let defer = Q.defer();
+    let url = baseUrl + "/weather?city=" + urlencode(city, 'utf8') + "&key=" + this.key
     request
-        .get(baseUrl + "/weather?city=" + city + "&key=" + this.key)
+        .get(url)
         .set('Accept', 'application/json')
         .end(function (err, res) {
             if (err) return defer.reject(err);
