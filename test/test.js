@@ -25,7 +25,7 @@ test.cb('WForewast#getWeatherByCity 北京', t => {
     }
 });
 
-test.cb('WForewast#getWeatherByCity Beijing', t => {
+test.skip.cb('WForewast#getWeatherByCity Beijing', t => {
     var wf = require('../index.js')(config.apiKey);
     try {
         wf.getWeatherByCity('beijing')
